@@ -1,5 +1,5 @@
 {
-  "name": "NEA Studio: No-Error Architecture",
-  "description": "A high-fidelity engineering tool for designing systems that never enter failing states. Implements the four hard design rules of No-Error Architecture (NEA) with real-time simulators and formal spec generation.",
+  "name": "EBC Studio: Entropy-Bounded Control",
+  "description": "A formal engineering framework for deterministic admission systems. Implements entropy-bounded execution to render failure operationally irrelevant through proactive state preemption.",
   "requestFramePermissions": []
 }

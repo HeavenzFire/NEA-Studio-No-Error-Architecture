@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { WorkUnit } from '../types';
+import { ShieldAlert, Target, CheckCircle2, AlertTriangle } from 'lucide-react';
 
 interface RefusalLogProps {
   history: WorkUnit[];
@@ -8,31 +9,42 @@ interface RefusalLogProps {
 
 export const RefusalLog: React.FC<RefusalLogProps> = ({ history }) => {
   return (
-    <div className="flex flex-col h-full">
-      <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-4 px-4">Event Stream</h3>
-      <div className="flex-1 overflow-y-auto space-y-2 px-4 pb-4">
-        {history.slice(-20).reverse().map((work) => (
+    <div className="flex flex-col h-full bg-black/20">
+      <div className="flex-1 overflow-y-auto space-y-1 px-4 py-4 scrollbar-hide">
+        {history.slice(-25).reverse().map((work) => (
           <div 
             key={work.id}
-            className={`p-3 rounded text-sm mono border flex justify-between items-center transition-all duration-300 ${
-              work.status === 'REFUSED' 
-                ? 'bg-red-950/20 border-red-900/40 text-red-400' 
+            className={`px-4 py-2 text-[10px] mono flex items-center justify-between border-l-2 transition-all duration-300 ${
+              work.status === 'PREEMPTED' 
+                ? 'bg-amber-950/5 border-l-amber-500 text-amber-500/80' 
                 : work.status === 'FAILED'
-                ? 'bg-zinc-800 border-dashed border-red-500 text-red-500'
-                : 'bg-green-950/20 border-green-900/40 text-green-400'
+                ? 'bg-red-950/10 border-l-red-600 text-red-500'
+                : work.status === 'ADMITTED'
+                ? 'bg-blue-950/5 border-l-blue-500 text-blue-400'
+                : 'bg-green-950/5 border-l-green-600 text-green-500/80'
             }`}
           >
-            <div>
-              <span className="opacity-50 mr-2">[{new Date(work.timestamp).toLocaleTimeString([], { hour12: false, minute: '2-digit', second: '2-digit' })}]</span>
-              <span className="font-semibold uppercase">{work.status}</span>
+            <div className="flex items-center gap-3">
+              <span className="opacity-40 tabular-nums">[{new Date(work.timestamp).toLocaleTimeString([], { hour12: false, minute: '2-digit', second: '2-digit' })}]</span>
+              <span className="font-black uppercase tracking-widest min-w-[80px]">
+                {work.status === 'PREEMPTED' ? 'PREEMPTED' : work.status}
+              </span>
+              <span className="opacity-30">|</span>
+              <span className="opacity-60">{work.id}</span>
             </div>
-            <div className="text-right">
-              {work.reason || `Payload: ${work.payload}`}
+            
+            <div className="flex items-center gap-4">
+              {work.status === 'PREEMPTED' && <Target className="w-3 h-3 opacity-50" />}
+              {work.status === 'FAILED' && <ShieldAlert className="w-3 h-3 opacity-50" />}
+              {work.status === 'COMPLETED' && <CheckCircle2 className="w-3 h-3 opacity-50" />}
+              <span className="font-bold opacity-80">{work.reason || `V=${work.payload}`}</span>
             </div>
           </div>
         ))}
         {history.length === 0 && (
-          <div className="text-zinc-600 italic text-center py-10">No events recorded. System idle.</div>
+          <div className="text-zinc-800 font-black uppercase text-[10px] tracking-[0.5em] text-center py-32 animate-pulse">
+            System Idle // Awaiting Invariant Trace
+          </div>
         )}
       </div>
     </div>

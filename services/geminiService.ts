@@ -7,14 +7,13 @@ export const formalizeSpec = async (description: string) => {
   const ai = getAI();
   const response = await ai.models.generateContent({
     model: "gemini-3-pro-preview",
-    contents: `You are a Senior Systems Architect specializing in No-Error Architecture (NEA). 
-    Your goal is to convert an informal system description into a formal NEA Specification.
+    contents: `You are a Formal Methods Engineer. Convert the following system description into a Formal Invariance Specification.
     
-    NEA principles:
-    1. Replace Exceptions with Refusals (Pre-admission validation).
-    2. Total State Transitions (Atomic/Complete).
-    3. Constraints as First-Class Logic.
-    4. Collapse Observation and Control.
+    Use TLA+ style logic for the 'formalLogic' field.
+    Focus on:
+    1. Type Invariants (Variables and their domains).
+    2. Safety Properties (What must never happen).
+    3. Transition Relations (Atomic state changes).
     
     Description: ${description}`,
     config: {
@@ -22,40 +21,23 @@ export const formalizeSpec = async (description: string) => {
       responseSchema: {
         type: Type.OBJECT,
         properties: {
-          systemName: { type: Type.STRING },
-          refusalLogic: { type: Type.STRING, description: "Detailed admission control rules." },
-          atomicTransitions: { type: Type.ARRAY, items: { type: Type.STRING }, description: "List of valid total transitions." },
-          constraints: { type: Type.ARRAY, items: { 
+          moduleName: { type: Type.STRING },
+          formalLogic: { type: Type.STRING, description: "TLA+ or formal logic block." },
+          invariants: { type: Type.ARRAY, items: { 
             type: Type.OBJECT,
             properties: {
-              metric: { type: Type.STRING },
-              boundary: { type: Type.STRING },
-              controlMechanism: { type: Type.STRING }
+              property: { type: Type.STRING },
+              definition: { type: Type.STRING },
+              safetyCritical: { type: Type.BOOLEAN }
             }
           }},
+          preemptionStrategy: { type: Type.STRING, description: "How to refuse work to maintain invariants." },
           summary: { type: Type.STRING }
         },
-        required: ["systemName", "refusalLogic", "atomicTransitions", "constraints", "summary"]
-      },
-      thinkingConfig: { thinkingBudget: 1000 }
+        required: ["moduleName", "formalLogic", "invariants", "preemptionStrategy", "summary"]
+      }
     }
   });
 
   return JSON.parse(response.text);
-};
-
-export const analyzeLineByLine = async (code: string) => {
-  const ai = getAI();
-  const response = await ai.models.generateContent({
-    model: "gemini-3-pro-preview",
-    contents: `Analyze this code and suggest how to remove exception handling and replace it with NEA Refusals and Deterministic paths.
-    
-    Code:
-    ${code}`,
-    config: {
-      systemInstruction: "Identify 'try-catch' blocks and 'if (error)' checks. Suggest atomic transition alternatives."
-    }
-  });
-  
-  return response.text;
 };
