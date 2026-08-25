@@ -1,0 +1,135 @@
+# DEDICATION.block — SyntropicOS Sovereign Archive Commitment
+
+## Block Metadata
+```
+BLOCK_VERSION: 1
+BLOCK_TYPE: DEDICATION
+GENERATION_TIMESTAMP: 2026-08-25T00:00:00Z
+GENERATOR_IDENTITY: SOVEREIGN_ARCHIVE_TOOLING
+TARGET_NODE: DESKTOP-0142RR5
+FREQUENCY_LOCK: 144Hz
+ARCHITECTURE_SIGNATURE: ENTANGLED_MULTIMODAL_PIPELINE
+```
+
+## Human Dedication Statement
+
+> This block represents a cryptographic commitment to the integrity, provenance, and 
+> public accountability of all artifacts within the SyntropicOS ecosystem.
+>
+> Created on this day, August 25, 2026, under the 144Hz frequency synchronization 
+> protocol, this dedication serves as an immutable anchor point for:
+>
+> - The Council archive: preserving the authoritative record of all system artifacts
+> - The Lineage index: tracking the genealogy and evolution of every derivative work
+> - The Public Accountability registry: enabling transparent external verification
+>
+> We dedicate this work to the principles of open collaboration, reproducible science,
+> and sovereign technical autonomy. May this block stand as testament to the collective
+> effort of all architects, builders, and integrators who contributed to this system.
+>
+> — The SyntropicOS Collective
+
+## Merkle Root Commitment
+
+### Algorithm Specification
+```
+Algorithm: SHA256-based binary Merkle tree
+Leaf encoding: SHA256_HASH + "\n" + PUBLIC_ID (UTF-8 bytes)
+Internal node encoding: SHA256(LEFT_CHILD || RIGHT_CHILD)
+Salt: None (deterministic construction)
+Padding: Duplicate last leaf if odd count at any level
+```
+
+### Leaf Hashes (to be populated)
+```
+# Format: LEAF_INDEX | PUBLIC_ID | SHA256_HASH | SOURCE_INDEX_FILE
+# Example:
+LEAF_000 | syntropic-core-v0.1 | a1b2c3d4... | /council/ARCHIVE_INDEX.md
+LEAF_001 | syntropic-core-v0.2 | e5f6g7h8... | /council/ARCHIVE_INDEX.md
+LEAF_002 | council-archive-tool | i9j0k1l2... | /council/ARCHIVE_INDEX.md
+LEAF_003 | telemetry-module | m3n4o5p6... | /lineage/ARCHIVE_INDEX.md
+LEAF_004 | merged-pipeline-v1 | q7r8s9t0... | /public-accountability/ARCHIVE_INDEX.md
+# ... additional leaves as artifacts are indexed
+```
+
+### Computed Merkle Root
+```
+MERKLE_ROOT: [COMPUTED_AFTER_POPULATING_LEAVES]
+ROOT_COMPUTATION_TIMESTAMP: [ISO8601_TIMESTAMP]
+TOTAL_LEAF_COUNT: [INTEGER]
+TREE_DEPTH: [INTEGER, ceil(log2(LEAF_COUNT))]
+```
+
+## Index File References
+
+This DEDICATION.block cryptographically commits to the following index files:
+
+| File Path | Purpose | SHA256_Hash |
+| --- | --- | --- |
+| /council/ARCHIVE_INDEX.md | Authoritative artifact registry | 43cec44caade29e56bf531dacaa1ea8d39bb08fb0292e4dfc1a13c3fac8a86a4 |
+| /lineage/ARCHIVE_INDEX.md | Genealogy and provenance tracking | 1a3eea8a9248c309a84a4dad16cd0a88d29fde32961ada0924a4f52421f4b5d2 |
+| /public-accountability/ARCHIVE_INDEX.md | Public verification registry | efbfaef5000523807450362bf97ef4f27a6618f5bd6ef217400715a363f18914 |
+
+## WORM Storage Instructions
+
+For maximum integrity preservation:
+
+1. **Write-Once-Read-Many (WORM) Storage**
+   ```bash
+   # Store on append-only media or cloud WORM bucket
+   # AWS S3 Object Lock example:
+   aws s3api put-object-retention \
+     --bucket syntropic-archive \
+     --key DEDICATION.block \
+     --retention '{"Mode": "GOVERNANCE", "RetainUntilDate": "2036-08-25"}'
+   ```
+
+2. **Distributed Replication**
+   - Maintain copies across geographically distributed nodes
+   - Use IPFS for content-addressed distribution:
+     ```bash
+     ipfs add DEDICATION.block
+     # Record the CID for future retrieval
+     ```
+
+3. **Periodic Re-commitment**
+   - Recompute this block quarterly or upon significant artifact additions
+   - Reference previous DEDICATION.block hash in new block's metadata
+   - Maintain chain of dedication blocks for temporal verification
+
+## Verification Protocol
+
+To verify this DEDICATION.block:
+
+```bash
+# 1. Verify index file hashes match committed values
+sha256sum -c DEDICATION.block.sha256sums
+
+# 2. Recompute Merkle root from leaf hashes
+./merkle_compute --leaves leaf_hashes.txt --verify-root MERKLE_ROOT
+
+# 3. Verify timestamp authenticity (if using trusted timestamping service)
+curl -X POST https://timestamp.example.com/verify \
+  -d "$(cat DEDICATION.block | sha256sum | awk '{print $1}')"
+```
+
+## Integration with Chain-of-Custody
+
+This block should be referenced in the COC_TEMPLATE.md as the ultimate cryptographic
+anchor for all archived artifacts. Any chain-of-custody record should ultimately trace
+back to a hash commitment within this DEDICATION.block.
+
+## Next Actions
+
+1. Populate LEAF_HASHES section with actual artifact hashes from all three index files
+2. Compute final MERKLE_ROOT using the specified algorithm
+3. Generate SHA256 checksums for all index files
+4. Sign the completed DEDICATION.block with GPG/PGP
+5. Distribute to WORM storage and replication nodes
+6. Publish verification instructions to public accountability registry
+
+---
+
+**Block Status**: TEMPLATE_READY_FOR_POPULATION  
+**Last Modified**: 2026-08-25T00:00:00Z  
+**Next Review**: Quarterly or upon major artifact addition
