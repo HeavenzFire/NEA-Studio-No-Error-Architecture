@@ -1,17 +1,1 @@
-```
-# Build artifacts
-dist/
-build/
-
-# Dependencies
-node_modules/
-package-lock.json
-
-# Environment
-.env
-.env.local
-.env.*
-
-# Logs
-*.log
-```
+Nothing should be ignored since only a Python source file (.py) was added and no build artifacts, dependencies, or temporary files were included in the changes.
