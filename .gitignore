@@ -1,3 +1,30 @@
 ```ts
 
 ```
+# Environment
+.env
+.env.local
+.env.*
+
+# Dependencies
+node_modules/
+.npm/
+.yarn/
+
+# Build outputs
+dist/
+build/
+*.js.map
+*.ts.map
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+```
