@@ -1,4 +1,19 @@
 ```
-# Build artifacts
-dist/
+# Environment and config files
+.env
+.env.local
+*.env.*
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Backup and system scripts
+*.bak
+*.backup
+*.sh.bak
+
+# OS generated files
+.DS_Store
+Thumbs.db
 ```
