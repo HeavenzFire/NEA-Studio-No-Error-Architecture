@@ -1,48 +1,250 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBC Studio: Entropy-Bounded Control</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>Sovereign Mesh HUD & VaultDB - Tier 3 Demo</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #e5e5e5;
+            background: #0a0f1e;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+            color: #fff;
         }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass {
-            background: rgba(23, 23, 23, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(64, 64, 64, 0.3);
+        
+        #mesh-hud {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
-        .refusal-glow {
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.1);
+        
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-        .admission-glow {
-            box-shadow: 0 0 20px rgba(34, 197, 94, 0.1);
+        
+        .controls button {
+            background: rgba(0, 255, 150, 0.2);
+            border: 1px solid #00ff96;
+            color: #00ff96;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        
+        .controls button:hover {
+            background: rgba(0, 255, 150, 0.4);
+        }
+        
+        .info-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0, 20, 40, 0.9);
+            border: 1px solid #00bfff;
+            padding: 15px;
+            max-width: 300px;
+        }
+        
+        .info-panel h3 {
+            color: #00bfff;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .info-panel p {
+            font-size: 11px;
+            margin: 5px 0;
+            color: #aaa;
+        }
+        
+        .demo-actions {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .demo-actions button {
+            background: rgba(0, 191, 255, 0.2);
+            border: 1px solid #00bfff;
+            color: #00bfff;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 11px;
+        }
+        
+        .demo-actions button:hover {
+            background: rgba(0, 191, 255, 0.4);
         }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <canvas id="mesh-hud"></canvas>
+    
+    <div class="info-panel">
+        <h3>SOVEREIGN MESH TIER 3</h3>
+        <p><strong>Status:</strong> <span id="status">Initializing...</span></p>
+        <p><strong>Node ID:</strong> <span id="node-id">-</span></p>
+        <p><strong>Peers:</strong> <span id="peer-count">0</span></p>
+        <p><strong>Vault:</strong> <span id="vault-status">Ready</span></p>
+    </div>
+    
+    <div class="demo-actions">
+        <button onclick="demoPublish()">Publish Message</button>
+        <button onclick="demoStoreSecure()">Store Encrypted</button>
+        <button onclick="demoReplicate()">Force Replicate</button>
+        <button onclick="demoToggleHUD()">Toggle HUD</button>
+    </div>
+    
+    <div class="controls">
+        <button onclick="demoConnect()">Connect</button>
+        <button onclick="demoDisconnect()">Disconnect</button>
+        <button onclick="demoStats()">Show Stats</button>
+        <button onclick="demoExport()">Export Data</button>
+    </div>
+
+    <script type="module">
+        import SovereignMesh from './src/index.js';
+        
+        let mesh = null;
+        
+        async function init() {
+            console.log('Starting Sovereign Mesh Tier 3 Demo...');
+            
+            try {
+                mesh = new SovereignMesh({
+                    nodeName: 'Sovereign-Alpha',
+                    hudEnabled: true,
+                    encryptionEnabled: true,
+                    replicationInterval: 3000
+                });
+                
+                await mesh.initialize();
+                await mesh.connect();
+                
+                // Update UI
+                document.getElementById('status').textContent = 'Connected';
+                document.getElementById('status').style.color = '#00ff96';
+                document.getElementById('node-id').textContent = mesh.nodeId.substring(0, 20) + '...';
+                
+                // Subscribe to a demo channel
+                mesh.subscribe('general', (msg) => {
+                    console.log('Received message:', msg);
+                });
+                
+                window.mesh = mesh;
+                
+            } catch (error) {
+                console.error('Initialization failed:', error);
+                document.getElementById('status').textContent = 'Error: ' + error.message;
+                document.getElementById('status').style.color = '#ff4444';
+            }
+        }
+        
+        // Expose demo functions globally
+        window.demoConnect = async () => {
+            if (mesh) {
+                await mesh.connect();
+                updateStatus('Connected', '#00ff96');
+            }
+        };
+        
+        window.demoDisconnect = () => {
+            if (mesh) {
+                mesh.disconnect();
+                updateStatus('Disconnected', '#ffd700');
+            }
+        };
+        
+        window.demoPublish = async () => {
+            if (mesh) {
+                const data = { 
+                    text: 'Hello from Tier 3!', 
+                    timestamp: Date.now(),
+                    random: Math.random()
+                };
+                await mesh.publish('general', data);
+                updatePeerCount();
+            }
+        };
+        
+        window.demoStoreSecure = async () => {
+            if (mesh) {
+                const secretData = { 
+                    apiKey: 'sk-secret-' + Math.random().toString(36).substring(7),
+                    password: 'secure-pass-' + Date.now()
+                };
+                await mesh.storeSecure('credentials', secretData);
+            }
+        };
+        
+        window.demoReplicate = async () => {
+            if (mesh) {
+                await mesh.replicate();
+                mesh.hud?.logMessage('Manual replication triggered', 'info');
+            }
+        };
+        
+        window.demoToggleHUD = () => {
+            if (mesh?.hud) {
+                mesh.hud.toggle();
+            }
+        };
+        
+        window.demoStats = () => {
+            if (mesh) {
+                const stats = mesh.getStats();
+                console.log('=== MESH STATS ===');
+                console.log(stats);
+                alert(JSON.stringify(stats, null, 2));
+            }
+        };
+        
+        window.demoExport = async () => {
+            if (mesh) {
+                const data = await mesh.exportData();
+                console.log('=== EXPORTED DATA ===');
+                console.log(data);
+                alert('Exported to console. Check browser dev tools.');
+            }
+        };
+        
+        function updateStatus(text, color) {
+            const el = document.getElementById('status');
+            el.textContent = text;
+            el.style.color = color;
+        }
+        
+        function updatePeerCount() {
+            if (mesh) {
+                document.getElementById('peer-count').textContent = mesh.peers.size;
+            }
+        }
+        
+        // Initialize on load
+        init();
+    </script>
 </body>
 </html>
