@@ -44,7 +44,7 @@ class SimulationConfig:
     
     # Adversarial pressure
     adversarial_lambda_base: float = 0.1
-    adversarial_evolution_rate: float = 0.00001
+    adversarial_evolution_rate: float = 0.001  # Increased for visible evolution
     
     def __post_init__(self):
         self.simulated_seconds = self.simulated_years * 365 * 24 * 3600

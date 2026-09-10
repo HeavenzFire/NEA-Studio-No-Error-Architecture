@@ -1,0 +1,1861 @@
+{
+  "report_timestamp": 1789073155,
+  "simulation_summary": {
+    "total_epochs_simulated": 71500,
+    "total_strategies_discovered": 26,
+    "active_strategies": 0,
+    "extinct_strategies": 26,
+    "total_encounters_recorded": 106
+  },
+  "threat_landscape": {
+    "family_distribution": {},
+    "top_10_threats": [],
+    "extinction_by_family": {
+      "replay": 3,
+      "threshold_probe": 3,
+      "infiltration": 3,
+      "phase_drift": 3,
+      "cascade": 10,
+      "exhaustion": 2,
+      "mutation_bypass": 2
+    },
+    "convergent_evolution_count": 36,
+    "convergent_hotspots": {
+      "replay": 3,
+      "threshold_probe": 12,
+      "mutation_bypass": 13,
+      "infiltration": 6,
+      "cascade": 27,
+      "phase_drift": 10,
+      "exhaustion": 1
+    }
+  },
+  "evolution_metrics": {
+    "average_mutation_rate": 0.114966,
+    "peak_mutation_epoch": 70000,
+    "total_births": 26,
+    "total_deaths": 26,
+    "net_evolution_rate": 0
+  },
+  "recommendations": [
+    "WARNING: replay shows convergent evolution (3 independent discoveries) - suggests fundamental vulnerability in current defenses",
+    "WARNING: threshold_probe shows convergent evolution (12 independent discoveries) - suggests fundamental vulnerability in current defenses",
+    "WARNING: mutation_bypass shows convergent evolution (13 independent discoveries) - suggests fundamental vulnerability in current defenses",
+    "WARNING: infiltration shows convergent evolution (6 independent discoveries) - suggests fundamental vulnerability in current defenses",
+    "WARNING: cascade shows convergent evolution (27 independent discoveries) - suggests fundamental vulnerability in current defenses",
+    "WARNING: phase_drift shows convergent evolution (10 independent discoveries) - suggests fundamental vulnerability in current defenses",
+    "SUCCESS: unknown countermeasures show highest extinction rate (26 strategies eliminated)"
+  ],
+  "runtime_seconds": 0.0,
+  "checkpoints": [
+    {
+      "epoch_year": 0,
+      "active_strategies": 12,
+      "mutations": 5,
+      "births": 5,
+      "deaths": 0,
+      "total_strategies_cumulative": 12,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 500,
+      "active_strategies": 12,
+      "mutations": 3,
+      "births": 3,
+      "deaths": 3,
+      "total_strategies_cumulative": 15,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 1000,
+      "active_strategies": 9,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 3,
+      "total_strategies_cumulative": 15,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 1500,
+      "active_strategies": 7,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 2,
+      "total_strategies_cumulative": 15,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 2000,
+      "active_strategies": 8,
+      "mutations": 1,
+      "births": 1,
+      "deaths": 0,
+      "total_strategies_cumulative": 16,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 2500,
+      "active_strategies": 8,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 16,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 3000,
+      "active_strategies": 5,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 3,
+      "total_strategies_cumulative": 16,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 3500,
+      "active_strategies": 3,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 2,
+      "total_strategies_cumulative": 16,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 4000,
+      "active_strategies": 2,
+      "mutations": 1,
+      "births": 1,
+      "deaths": 2,
+      "total_strategies_cumulative": 17,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 4500,
+      "active_strategies": 2,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 17,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 5000,
+      "active_strategies": 3,
+      "mutations": 1,
+      "births": 1,
+      "deaths": 0,
+      "total_strategies_cumulative": 18,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 5500,
+      "active_strategies": 4,
+      "mutations": 1,
+      "births": 1,
+      "deaths": 0,
+      "total_strategies_cumulative": 19,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 6000,
+      "active_strategies": 4,
+      "mutations": 1,
+      "births": 1,
+      "deaths": 1,
+      "total_strategies_cumulative": 20,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 6500,
+      "active_strategies": 3,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 20,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 7000,
+      "active_strategies": 2,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 20,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 7500,
+      "active_strategies": 2,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 20,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 8000,
+      "active_strategies": 2,
+      "mutations": 1,
+      "births": 1,
+      "deaths": 1,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 8500,
+      "active_strategies": 2,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 9000,
+      "active_strategies": 2,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 9500,
+      "active_strategies": 2,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 10000,
+      "active_strategies": 2,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 10500,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 11000,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 11500,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 12000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 12500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 13000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 13500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 14000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 14500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 15000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 15500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 16000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 16500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 17000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 17500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 18000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 18500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 19000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 19500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 20000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 20500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 21000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 21500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 22000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 22500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 23000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 21,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 23500,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 1,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 24000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 24500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 25000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 25500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 26000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 26500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 27000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 27500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 28000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 28500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 29000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 29500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 30000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 30500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 31000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 31500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 32000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 32500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 33000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 33500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 34000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 34500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 35000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 35500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 36000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 36500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 22,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 37000,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 1,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 37500,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 38000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 38500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 39000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 39500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 40000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 40500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 41000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 41500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 42000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 42500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 43000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 43500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 44000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 44500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 45000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 45500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 46000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 46500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 47000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 47500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 48000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 48500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 49000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 49500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 50000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 50500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 51000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 51500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 52000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 52500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 53000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 53500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 54000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 54500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 55000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 55500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 56000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 56500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 57000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 57500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 58000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 58500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 59000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 59500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 60000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 60500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 61000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 61500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 62000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 62500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 63000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 63500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 64000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 64500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 65000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 65500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 66000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 66500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 67000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 67500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 68000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 68500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 23,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 69000,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 1,
+      "deaths": 0,
+      "total_strategies_cumulative": 24,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 69500,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 24,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 70000,
+      "active_strategies": 2,
+      "mutations": 1,
+      "births": 1,
+      "deaths": 0,
+      "total_strategies_cumulative": 25,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 70500,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 25,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 71000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 25,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 71500,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 1,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 72000,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 72500,
+      "active_strategies": 1,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 73000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 1,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 73500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 74000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 74500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 75000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 75500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 76000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 76500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 77000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 77500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 78000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 78500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 79000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 79500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 80000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 80500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 81000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 81500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 82000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 82500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 83000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 83500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 84000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 84500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 85000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 85500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 86000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 86500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 87000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 87500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 88000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 88500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 89000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 89500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 90000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 90500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 91000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 91500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 92000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 92500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.48999999999999994
+    },
+    {
+      "epoch_year": 93000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5002781315780177
+    },
+    {
+      "epoch_year": 93500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.530106431181261
+    },
+    {
+      "epoch_year": 94000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.5765650970185806
+    },
+    {
+      "epoch_year": 94500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.635106431181261
+    },
+    {
+      "epoch_year": 95000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7
+    },
+    {
+      "epoch_year": 95500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.764893568818739
+    },
+    {
+      "epoch_year": 96000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8234349029814192
+    },
+    {
+      "epoch_year": 96500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8698935688187388
+    },
+    {
+      "epoch_year": 97000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8997218684219821
+    },
+    {
+      "epoch_year": 97500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.9099999999999999
+    },
+    {
+      "epoch_year": 98000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8997218684219822
+    },
+    {
+      "epoch_year": 98500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.869893568818739
+    },
+    {
+      "epoch_year": 99000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.8234349029814194
+    },
+    {
+      "epoch_year": 99500,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7648935688187389
+    },
+    {
+      "epoch_year": 100000,
+      "active_strategies": 0,
+      "mutations": 0,
+      "births": 0,
+      "deaths": 0,
+      "total_strategies_cumulative": 26,
+      "defense_effectiveness": 0.7
+    }
+  ]
+}
