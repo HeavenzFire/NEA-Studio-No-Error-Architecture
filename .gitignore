@@ -1,4 +1,7 @@
 ```
+# Compiled Python files
+__pycache__/
+*.pyc
 # Data files
 *.json
 
@@ -24,12 +27,21 @@ venv/
 coverage/
 htmlcov/
 
-# Logs and temp files
+# Logs and temporary files
 *.log
 *.tmp
-*.swp
-*.swo
 
+# Environment files
+.env
+*.env.*
+
+# Coverage reports
+.coverage
+coverage/
+htmlcov/
+
+# JSON report files
+*.json
 # OS generated files
 .DS_Store
 .DS_Store?
