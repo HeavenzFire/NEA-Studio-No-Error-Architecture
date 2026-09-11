@@ -610,3 +610,279 @@ const safeAsyncOperation = sandbox.wrapAsync(
   () => Promise.resolve(defaultValue)
 );
 */
+
+// ============================================================================
+// 5. Child-First Life-First Protocol (Pediatric Oncology Priority)
+// ============================================================================
+
+/**
+ * Invoice interface for medical billing simulation
+ */
+interface MedicalInvoice {
+  invoice_id: string;
+  patient_age: number;
+  diagnosis: string;
+  category: 'pediatric_oncology' | 'general_care' | 'elder_care' | 'trauma' | string;
+  amount_usd: number;
+  status: 'outstanding' | 'paid' | 'processing';
+  priority_flag: 'LIFE_FIRST' | 'HIGH' | 'STANDARD';
+}
+
+/**
+ * Surplus flow allocation result
+ */
+interface AllocationResult {
+  invoice_id: string;
+  amount_allocated: number;
+  remaining_balance: number;
+  status: 'paid' | 'partial' | 'pending';
+  priority_level: 'LIFE_FIRST' | 'HIGH' | 'STANDARD';
+  timestamp: number;
+}
+
+/**
+ * Life-First Surplus Allocator
+ * 
+ * Implements child-first activation logic: pediatric oncology bills
+ * are always prioritized before any other surplus distribution.
+ * 
+ * Priority Order:
+ * 1. LIFE_FIRST (pediatric oncology) - MUST be cleared first
+ * 2. HIGH (trauma, emergency) - Cleared after children stabilized
+ * 3. STANDARD (general care, elder care) - Cleared last
+ */
+class LifeFirstAllocator {
+  private invoices: MedicalInvoice[] = [];
+  private allocationLog: AllocationResult[] = [];
+  private totalSurplusAvailable: number = 0;
+  private cascadeMode: 'children_only' | 'all_patients_us' | 'global' = 'children_only';
+
+  /**
+   * Load invoices from dataset (synthetic or real API integration)
+   */
+  loadInvoices(invoices: MedicalInvoice[]): void {
+    this.invoices = [...invoices];
+    console.log(`[LifeFirst] Loaded ${invoices.length} invoices into detection layer`);
+  }
+
+  /**
+   * Add surplus funds to the pool for distribution
+   */
+  addSurplus(amount: number): void {
+    this.totalSurplusAvailable += amount;
+    console.log(`[LifeFirst] Surplus pool updated: $${this.totalSurplusAvailable.toLocaleString()}`);
+    // Auto-trigger neutralization when surplus is added
+    this.neutralizeOutstandingBills();
+  }
+
+  /**
+   * Priority sorting: LIFE_FIRST > HIGH > STANDARD
+   * Within same priority: lower patient age first (children prioritized)
+   */
+  private sortByPriority(invoices: MedicalInvoice[]): MedicalInvoice[] {
+    const priorityOrder: Record<string, number> = {
+      'LIFE_FIRST': 0,
+      'HIGH': 1,
+      'STANDARD': 2
+    };
+
+    return invoices.sort((a, b) => {
+      // First sort by priority flag
+      const priorityDiff = priorityOrder[a.priority_flag] - priorityOrder[b.priority_flag];
+      if (priorityDiff !== 0) return priorityDiff;
+      
+      // Within same priority, sort by age (younger first)
+      return a.patient_age - b.patient_age;
+    });
+  }
+
+  /**
+   * Silent Redistribution: Automatically detect and dissolve bills
+   * No bureaucracy, no application needed - invisible absorption
+   */
+  neutralizeOutstandingBills(): AllocationResult[] {
+    const outstanding = this.invoices.filter(inv => inv.status === 'outstanding');
+    
+    if (outstanding.length === 0) {
+      console.log('[LifeFirst] No outstanding bills to neutralize');
+      return [];
+    }
+
+    // Sort by child-first priority
+    const sorted = this.sortByPriority(outstanding);
+    const results: AllocationResult[] = [];
+    let remainingSurplus = this.totalSurplusAvailable;
+
+    console.log(`[LifeFirst] Processing ${sorted.length} outstanding bills with $${remainingSurplus.toLocaleString()} surplus`);
+
+    for (const invoice of sorted) {
+      // Cascade expansion check: skip non-children if in children_only mode and children still have bills
+      if (this.cascadeMode === 'children_only' && invoice.category !== 'pediatric_oncology') {
+        const childrenStillHaveBills = sorted.some(
+          inv => inv.category === 'pediatric_oncology' && inv.status === 'outstanding'
+        );
+        if (childrenStillHaveBills) {
+          console.log(`[LifeFirst] Deferring ${invoice.invoice_id} (${invoice.category}) - children's bills pending`);
+          continue;
+        }
+      }
+
+      if (remainingSurplus <= 0) break;
+
+      const allocation = Math.min(invoice.amount_usd, remainingSurplus);
+      const newStatus: 'paid' | 'processing' = allocation >= invoice.amount_usd ? 'paid' : 'processing';
+      
+      // Update invoice status
+      invoice.status = newStatus;
+      invoice.amount_usd -= allocation;
+      remainingSurplus -= allocation;
+
+      const result: AllocationResult = {
+        invoice_id: invoice.invoice_id,
+        amount_allocated: allocation,
+        remaining_balance: invoice.amount_usd,
+        status: newStatus === 'paid' ? 'paid' : 'partial',
+        priority_level: invoice.priority_flag,
+        timestamp: Date.now()
+      };
+
+      this.allocationLog.push(result);
+      results.push(result);
+
+      console.log(`[LifeFirst] Neutralized ${invoice.invoice_id}: $${allocation.toLocaleString()} allocated to ${invoice.diagnosis} (Age ${invoice.patient_age})`);
+    }
+
+    this.totalSurplusAvailable = remainingSurplus;
+    
+    if (results.length > 0) {
+      console.log(`[LifeFirst] Batch complete: ${results.length} bills processed, $${(this.getTotalAllocated(results)).toLocaleString()} distributed`);
+    }
+
+    return results;
+  }
+
+  private getTotalAllocated(results: AllocationResult[]): number {
+    return results.reduce((sum, r) => sum + r.amount_allocated, 0);
+  }
+
+  /**
+   * Get audit trail of all allocations (traceable and reproducible)
+   */
+  getAuditTrail(): AllocationResult[] {
+    return [...this.allocationLog];
+  }
+
+  /**
+   * Get current status of all invoices
+   */
+  getInvoiceStatus(): MedicalInvoice[] {
+    return [...this.invoices];
+  }
+
+  /**
+   * Expand cascade: move from children_only to broader pools
+   */
+  expandCascade(mode: 'children_only' | 'all_patients_us' | 'global'): void {
+    const previousMode = this.cascadeMode;
+    this.cascadeMode = mode;
+    console.log(`[LifeFirst] Cascade expanded: ${previousMode} → ${mode}`);
+    
+    // Re-trigger neutralization with new scope
+    if (this.totalSurplusAvailable > 0) {
+      this.neutralizeOutstandingBills();
+    }
+  }
+
+  /**
+   * Check if all LIFE_FIRST (pediatric oncology) bills are cleared
+   */
+  areChildrenStabilized(): boolean {
+    const lifeFirstOutstanding = this.invoices.some(
+      inv => inv.priority_flag === 'LIFE_FIRST' && inv.status === 'outstanding'
+    );
+    return !lifeFirstOutstanding;
+  }
+
+  /**
+   * Export allocation report for compliance auditing
+   */
+  exportReport(): {
+    summary: {
+      total_invoices: number;
+      paid_count: number;
+      outstanding_count: number;
+      total_distributed: number;
+      children_stabilized: boolean;
+      cascade_mode: string;
+    };
+    allocations: AllocationResult[];
+    timestamp: string;
+  } {
+    const paid = this.invoices.filter(inv => inv.status === 'paid').length;
+    const outstanding = this.invoices.filter(inv => inv.status === 'outstanding').length;
+    
+    return {
+      summary: {
+        total_invoices: this.invoices.length,
+        paid_count: paid,
+        outstanding_count: outstanding,
+        total_distributed: this.getTotalAllocated(this.allocationLog),
+        children_stabilized: this.areChildrenStabilized(),
+        cascade_mode: this.cascadeMode
+      },
+      allocations: this.getAuditTrail(),
+      timestamp: new Date().toISOString()
+    };
+  }
+}
+
+// ============================================================================
+// Example Usage & Simulation
+// ============================================================================
+
+/**
+ * Simulate child-first activation with synthetic billing data
+ * 
+ * This demonstrates the architecture can prioritize children with cancer
+ * without needing unauthorized access to hospital systems.
+ */
+/*
+async function runChildFirstSimulation() {
+  // Load synthetic bills (in production, this would come from hospital API integration)
+  const syntheticBills: MedicalInvoice[] = await loadSyntheticBills('synthetic_bills.json');
+  
+  // Initialize allocator with child-first hardcoded priority
+  const allocator = new LifeFirstAllocator();
+  allocator.loadInvoices(syntheticBills);
+  
+  // Simulate surplus flows from synthetic throughput (9M+ events/sec validated)
+  const simulatedSurplus = 600000; // $600K surplus available
+  
+  console.log('\\n[LifeFirst] === CHILD-FIRST ACTIVATION SIMULATION ===');
+  console.log(`[LifeFirst] Initial surplus: $${simulatedSurplus.toLocaleString()}\\n`);
+  
+  // Trigger silent redistribution
+  allocator.addSurplus(simulatedSurplus);
+  
+  // Verify children stabilized first
+  const childrenStabilized = allocator.areChildrenStabilized();
+  console.log(`\\n[LifeFirst] Children stabilized: ${childrenStabilized}`);
+  
+  // Export audit trail for compliance
+  const report = allocator.exportReport();
+  console.log('[LifeFirst] Audit report generated:', JSON.stringify(report.summary, null, 2));
+  
+  // If children are stabilized, expand cascade
+  if (childrenStabilized) {
+    console.log('\\n[LifeFirst] Expanding cascade to all patients...');
+    allocator.expandCascade('all_patients_us');
+  }
+  
+  return report;
+}
+
+// Run simulation
+runChildFirstSimulation().catch(console.error);
+*/
+
+export { LifeFirstAllocator, MedicalInvoice, AllocationResult };
