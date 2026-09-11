@@ -1,1 +1,65 @@
-(child_first_simulation.py and synthetic_bills.json are source files, along with the other modified files which appear to be source/config files - no build artifacts, dependencies, or temp files in the changes)
+```
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Coverage reports
+.coverage
+coverage/
+htmlcov/
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+.tox/
+.coverage*
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+.ENV/
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# MyPy cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Distribution / packaging
+.Python
+*.so
+.PyInstaller/
+.spec
+```

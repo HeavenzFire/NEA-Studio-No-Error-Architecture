@@ -14,7 +14,7 @@
       "remaining_balance": 0.0,
       "status": "paid",
       "priority_level": "LIFE_FIRST",
-      "timestamp": 1789092599306
+      "timestamp": 1789092925398
     },
     {
       "invoice_id": "INV-001",
@@ -22,7 +22,7 @@
       "remaining_balance": 0.0,
       "status": "paid",
       "priority_level": "LIFE_FIRST",
-      "timestamp": 1789092599306
+      "timestamp": 1789092925398
     },
     {
       "invoice_id": "INV-005",
@@ -30,7 +30,7 @@
       "remaining_balance": 0.0,
       "status": "paid",
       "priority_level": "LIFE_FIRST",
-      "timestamp": 1789092599306
+      "timestamp": 1789092925398
     },
     {
       "invoice_id": "INV-006",
@@ -38,7 +38,7 @@
       "remaining_balance": 0.0,
       "status": "paid",
       "priority_level": "HIGH",
-      "timestamp": 1789092599306
+      "timestamp": 1789092925398
     },
     {
       "invoice_id": "INV-002",
@@ -46,8 +46,8 @@
       "remaining_balance": 10000.0,
       "status": "partial",
       "priority_level": "STANDARD",
-      "timestamp": 1789092599306
+      "timestamp": 1789092925398
     }
   ],
-  "timestamp": "2026-09-11T02:09:59.306950"
+  "timestamp": "2026-09-11T02:15:25.399001"
 }
