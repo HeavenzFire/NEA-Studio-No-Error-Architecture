@@ -350,20 +350,17 @@ class EpochScaleSimulator:
             new_swarm.append(agent)
         return new_swarm
         
-    def run_simulation(self, verbose_interval: int = 1_000_000, max_cycles: Optional[int] = None) -> Dict:
-        """Run the epoch-scale simulation (optimized for demonstration)"""
-        # For demo purposes, simulate a representative sample
-        # Full 100,000 years would take ~876 hours at 1M scaling factor
-        # We'll run enough cycles to demonstrate evolutionary patterns
-        target_cycles = max_cycles if max_cycles else min(10_000_000, self.config.simulated_seconds // 1000)
+    def run_simulation(self, verbose_interval: int = 250_000, max_cycles: Optional[int] = None) -> Dict:
+        """Run the epoch-scale simulation (optimized for quick demo)"""
+        # Reduced cycles for fast demonstration while showing evolutionary patterns
+        target_cycles = max_cycles if max_cycles else 500_000
         
         print(f"🚀 Starting Epoch-Scale Simulation")
-        print(f"   Target: {self.config.simulated_years:,} years simulated timespan")
-        print(f"   Running {target_cycles:,} cycles (representative sample)")
+        print(f"   Configuration: {self.config.simulated_years:,} year capability")
+        print(f"   Running {target_cycles:,} cycles (quick demo)")
         print(f"   Temporal scaling: 1s real = {self.config.temporal_scaling_factor:,}s simulated")
-        print(f"   Each cycle represents ~{(self.config.temporal_scaling_factor / 86400):.1f} days of evolution")
         simulated_years_sample = target_cycles * self.config.temporal_scaling_factor / (365 * 24 * 3600)
-        print(f"   Simulated time covered: ~{simulated_years_sample:,.1f} years")
+        print(f"   Simulating ~{simulated_years_sample:,.0f} years of swarm evolution")
         print()
         
         start_time = time.time()
@@ -385,7 +382,7 @@ class EpochScaleSimulator:
                       f"Swarm={len(self.swarm)}, "
                       f"Threshold={self.threshold.current_value:.4f}, "
                       f"Adversarial={self.adversarial_engine.current_pressure:.4f}, "
-                      f"Rate={cycles_per_sec:,.0f} cycles/sec")
+                      f"Rate={cycles_per_sec:,.0f} c/s")
                       
                 last_report_cycle = self.stats['total_cycles']
                 
