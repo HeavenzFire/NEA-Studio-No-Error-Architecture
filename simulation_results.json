@@ -1,0 +1,93 @@
+{
+  "simulation_config": {
+    "simulated_years": 100000,
+    "temporal_scaling": 1000000,
+    "initial_swarm_size": 1000
+  },
+  "results": {
+    "total_cycles_executed": 500000,
+    "real_world_runtime_seconds": 26.077247142791748,
+    "cycles_per_second": 19173.803019242758,
+    "simulated_time_covered_years": 15.854895991882293,
+    "final_swarm_population": 48,
+    "final_threshold_value": 0.95,
+    "final_adversarial_pressure": 0.95,
+    "extinction_events": 31848,
+    "threshold_adaptations": 177167,
+    "collapse_near_misses": 7749,
+    "phase_lock_integrity_violations": 0,
+    "max_generation_reached": 2
+  },
+  "evolutionary_analysis": {
+    "generation_progression": [
+      {
+        "cycle": 491000,
+        "max_gen": 0,
+        "avg_gen": 0.0,
+        "population": 25
+      },
+      {
+        "cycle": 492000,
+        "max_gen": 1,
+        "avg_gen": 0.015151515151515152,
+        "population": 66
+      },
+      {
+        "cycle": 493000,
+        "max_gen": 1,
+        "avg_gen": 0.09090909090909091,
+        "population": 11
+      },
+      {
+        "cycle": 494000,
+        "max_gen": 0,
+        "avg_gen": 0.0,
+        "population": 1
+      },
+      {
+        "cycle": 495000,
+        "max_gen": 0,
+        "avg_gen": 0.0,
+        "population": 2
+      },
+      {
+        "cycle": 496000,
+        "max_gen": 0,
+        "avg_gen": 0.0,
+        "population": 19
+      },
+      {
+        "cycle": 497000,
+        "max_gen": 0,
+        "avg_gen": 0.0,
+        "population": 1
+      },
+      {
+        "cycle": 498000,
+        "max_gen": 0,
+        "avg_gen": 0.0,
+        "population": 1
+      },
+      {
+        "cycle": 499000,
+        "max_gen": 1,
+        "avg_gen": 0.02127659574468085,
+        "population": 47
+      },
+      {
+        "cycle": 500000,
+        "max_gen": 1,
+        "avg_gen": 0.020833333333333332,
+        "population": 48
+      }
+    ],
+    "evolved_adversarial_strategies": 0,
+    "threshold_stability": 0.354334
+  },
+  "phase_lock_analysis": {
+    "total_verifications": 500000,
+    "integrity_violations": 0,
+    "final_drift": 5e-10,
+    "verification_log_samples": []
+  }
+}
