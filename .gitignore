@@ -1,4 +1,4 @@
-```
+```gitignore
 # Compiled Python files
 __pycache__/
 *.pyc
@@ -33,27 +33,32 @@ htmlcov/
 
 # Environment files
 .env
+.env.local
 *.env.*
 
-# Coverage reports
-.coverage
-coverage/
-htmlcov/
-
-# JSON report files
-*.json
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Editors
+# Editors/IDE
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Build artifacts
+dist/
+build/
+target/
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.gradle/
+
+# System files
+.DS_Store
+Thumbs.db
 ```
