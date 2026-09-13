@@ -8,6 +8,8 @@
     "total_cycles_executed": 500000,
     "real_world_runtime_seconds": 24.799782514572144,
     "cycles_per_second": 20161.46713005262,
+    "real_world_runtime_seconds": 26.077247142791748,
+    "cycles_per_second": 19173.803019242758,
     "simulated_time_covered_years": 15.854895991882293,
     "final_swarm_population": 48,
     "final_threshold_value": 0.95,
