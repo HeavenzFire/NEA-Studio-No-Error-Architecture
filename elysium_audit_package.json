@@ -1,0 +1,36 @@
+{
+  "protocol_version": "1.0",
+  "export_timestamp": "2026-09-13T02:41:37.213100Z",
+  "vault_summary": {
+    "total_snapshots": 3,
+    "active_states": 1,
+    "dormant_states": 1,
+    "restored_states": 1
+  },
+  "restoration_receipts": [
+    {
+      "event_type": "ELYSIUM_RESTORE",
+      "lineage_id": "L-DEMO-001-DORM",
+      "source_state_hash": "sha256:44bd6ca51f48f7fd3789bc1ad52d8af97756c7451b7aabb56503e04c7d0415cd",
+      "restored_state_hash": "sha256:44bd6ca51f48f7fd3789bc1ad52d8af97756c7451b7aabb56503e04c7d0415cd",
+      "source_timestamp": "2026-09-13T02:41:37.212919Z",
+      "restore_timestamp": "2026-09-13T02:41:37.212954Z",
+      "reconstruction_method": "deterministic-replay-v1",
+      "verification": {
+        "hash_match": true,
+        "state_integrity": true,
+        "provenance_complete": true
+      },
+      "delta_analysis": {
+        "bytes_restored": 113,
+        "fields_count": 4,
+        "reconstruction_time_ms": 0.1
+      }
+    }
+  ],
+  "lineage_graph_sample": {
+    "sha256:44bd6ca51f48f7fd3789bc1ad52d8af97756c7451b7aabb56503e04c7d0415cd": [
+      "L-DEMO-001-DORM-RESTORED"
+    ]
+  }
+}
