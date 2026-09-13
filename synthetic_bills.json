@@ -1,0 +1,56 @@
+[
+  {
+    "invoice_id": "INV-001",
+    "patient_age": 7,
+    "diagnosis": "Acute Lymphoblastic Leukemia",
+    "category": "pediatric_oncology",
+    "amount_usd": 125000.00,
+    "status": "outstanding",
+    "priority_flag": "LIFE_FIRST"
+  },
+  {
+    "invoice_id": "INV-002",
+    "patient_age": 45,
+    "diagnosis": "General Surgery",
+    "category": "general_care",
+    "amount_usd": 15000.00,
+    "status": "outstanding",
+    "priority_flag": "STANDARD"
+  },
+  {
+    "invoice_id": "INV-003",
+    "patient_age": 5,
+    "diagnosis": "Neuroblastoma",
+    "category": "pediatric_oncology",
+    "amount_usd": 230000.00,
+    "status": "outstanding",
+    "priority_flag": "LIFE_FIRST"
+  },
+  {
+    "invoice_id": "INV-004",
+    "patient_age": 72,
+    "diagnosis": "Cardiac Care",
+    "category": "elder_care",
+    "amount_usd": 45000.00,
+    "status": "outstanding",
+    "priority_flag": "STANDARD"
+  },
+  {
+    "invoice_id": "INV-005",
+    "patient_age": 9,
+    "diagnosis": "Wilms Tumor",
+    "category": "pediatric_oncology",
+    "amount_usd": 180000.00,
+    "status": "outstanding",
+    "priority_flag": "LIFE_FIRST"
+  },
+  {
+    "invoice_id": "INV-006",
+    "patient_age": 30,
+    "diagnosis": "Trauma Recovery",
+    "category": "trauma",
+    "amount_usd": 60000.00,
+    "status": "outstanding",
+    "priority_flag": "HIGH"
+  }
+]

@@ -1,0 +1,315 @@
+{
+  "test_suite": "synthetic_load_test",
+  "timestamp": 1789091886.6964169,
+  "config": {
+    "target_eps": 500000,
+    "concurrent_swarms": 500,
+    "extended_duration_min": 1
+  },
+  "scenarios": {
+    "eps_ramp_up": {
+      "scenario": "eps_ramp_up",
+      "steps": [
+        {
+          "step": 1,
+          "target_eps": 62500,
+          "actual_eps": 86397.59323721079,
+          "avg_latency_ms": 52.067170968750794,
+          "total_anomalies": 0,
+          "success": true
+        },
+        {
+          "step": 2,
+          "target_eps": 125000,
+          "actual_eps": 42212.18219352738,
+          "avg_latency_ms": 56.67701395238043,
+          "total_anomalies": 0,
+          "success": false
+        }
+      ]
+    },
+    "adversarial_flood": {
+      "scenario": "adversarial_flood",
+      "flood_events": {
+        "total": 129750,
+        "anomalies": 30501,
+        "rate": 64875.0,
+        "duration_sec": 2.0
+      },
+      "recovery_metrics": {
+        "time_to_stabilize_sec": 10.0,
+        "avg_post_flood_latency_ms": 0.6291762857144823,
+        "recovered": true
+      }
+    },
+    "multi_swarm": {
+      "scenario": "multi_swarm_concurrency",
+      "swarm_count": 500,
+      "snapshots": [
+        {
+          "snapshot": 1,
+          "events": 26437,
+          "latency_ms": 146.28725400000064,
+          "compression_ratio": 10.0,
+          "anomalies": 254,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 2,
+          "events": 27137,
+          "latency_ms": 144.8183799999896,
+          "compression_ratio": 10.0,
+          "anomalies": 266,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 3,
+          "events": 27591,
+          "latency_ms": 146.89870300000507,
+          "compression_ratio": 10.0,
+          "anomalies": 277,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 4,
+          "events": 28698,
+          "latency_ms": 154.26399199999707,
+          "compression_ratio": 10.0,
+          "anomalies": 327,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 5,
+          "events": 26564,
+          "latency_ms": 146.24824899999567,
+          "compression_ratio": 10.0,
+          "anomalies": 265,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 6,
+          "events": 28264,
+          "latency_ms": 156.21882099999596,
+          "compression_ratio": 10.0,
+          "anomalies": 275,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 7,
+          "events": 27286,
+          "latency_ms": 151.69668800000125,
+          "compression_ratio": 10.0,
+          "anomalies": 282,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 8,
+          "events": 27272,
+          "latency_ms": 152.28455799999097,
+          "compression_ratio": 10.0,
+          "anomalies": 254,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 9,
+          "events": 26772,
+          "latency_ms": 154.98577900000043,
+          "compression_ratio": 10.0,
+          "anomalies": 259,
+          "memory_mb": 101.6640625
+        },
+        {
+          "snapshot": 10,
+          "events": 27534,
+          "latency_ms": 161.3329949999951,
+          "compression_ratio": 10.0,
+          "anomalies": 295,
+          "memory_mb": 101.6640625
+        }
+      ]
+    },
+    "memory_pressure": {
+      "scenario": "memory_pressure",
+      "duration_minutes": 1,
+      "memory_samples": [
+        {
+          "elapsed_min": 0.48379996220270793,
+          "memory_mb": 101.6640625,
+          "events_processed": 407000
+        },
+        {
+          "elapsed_min": 0.4872444629669189,
+          "memory_mb": 101.6640625,
+          "events_processed": 408000
+        },
+        {
+          "elapsed_min": 0.4893933852513631,
+          "memory_mb": 101.6640625,
+          "events_processed": 409000
+        },
+        {
+          "elapsed_min": 0.49141446352005,
+          "memory_mb": 101.6640625,
+          "events_processed": 410000
+        },
+        {
+          "elapsed_min": 0.49346141815185546,
+          "memory_mb": 101.6640625,
+          "events_processed": 411000
+        },
+        {
+          "elapsed_min": 0.4956984718640645,
+          "memory_mb": 101.6640625,
+          "events_processed": 412000
+        },
+        {
+          "elapsed_min": 0.497855552037557,
+          "memory_mb": 101.6640625,
+          "events_processed": 413000
+        },
+        {
+          "elapsed_min": 0.5000117381413778,
+          "memory_mb": 101.6640625,
+          "events_processed": 414000
+        }
+      ],
+      "gc_events": [],
+      "memory_analysis": {
+        "initial_mb": 101.6640625,
+        "final_mb": 101.6640625,
+        "growth_mb": 0.0,
+        "growth_rate_mb_per_min": 0.0,
+        "status": "STABLE"
+      }
+    },
+    "throughput": {
+      "scenario": "compression_throughput",
+      "benchmarks": [
+        {
+          "payload_size": 100,
+          "encode_time_sec": 1.592299997810187e-05,
+          "throughput_events_per_sec": 6280223.584596191,
+          "raw_size_kb": 0.78125,
+          "compressed_size_kb": 0.078125,
+          "compression_ratio": 10.0,
+          "throughput_mb_sec": 47.91430347134545
+        },
+        {
+          "payload_size": 1000,
+          "encode_time_sec": 0.00011076600000592407,
+          "throughput_events_per_sec": 9028041.095160224,
+          "raw_size_kb": 7.8125,
+          "compressed_size_kb": 0.78125,
+          "compression_ratio": 10.0,
+          "throughput_mb_sec": 68.87848735931567
+        },
+        {
+          "payload_size": 10000,
+          "encode_time_sec": 0.0011295509999911246,
+          "throughput_events_per_sec": 8853075.248553252,
+          "raw_size_kb": 78.125,
+          "compressed_size_kb": 7.8125,
+          "compression_ratio": 10.0,
+          "throughput_mb_sec": 67.54360388605691
+        },
+        {
+          "payload_size": 100000,
+          "encode_time_sec": 0.012975824999983843,
+          "throughput_events_per_sec": 7706639.076908368,
+          "raw_size_kb": 781.25,
+          "compressed_size_kb": 78.125,
+          "compression_ratio": 10.0,
+          "throughput_mb_sec": 58.79699002768225
+        },
+        {
+          "payload_size": 1000000,
+          "encode_time_sec": 0.11989359399998989,
+          "throughput_events_per_sec": 8340729.196925103,
+          "raw_size_kb": 7812.5,
+          "compressed_size_kb": 781.25,
+          "compression_ratio": 10.0,
+          "throughput_mb_sec": 63.63471372165758
+        }
+      ]
+    }
+  },
+  "summary": {
+    "latency": {
+      "mean_ms": 96.67859934374957,
+      "median_ms": 80.5701870000064,
+      "p95_ms": 156.21882099999596,
+      "p99_ms": 161.3329949999951,
+      "max_ms": 161.3329949999951
+    },
+    "compression": {
+      "mean_ratio": 6.126348478536915,
+      "min_ratio": 1.188190258222118,
+      "max_ratio": 10.0
+    },
+    "memory": {
+      "mean_mb": 90.8709716796875,
+      "max_mb": 101.6640625,
+      "trend": "increasing"
+    },
+    "throughput": {
+      "total_events": 273555,
+      "total_anomalies": 2754,
+      "batches_processed": 10
+    },
+    "errors": {
+      "count": 110,
+      "recent": [
+        {
+          "timestamp": 1789091916.167159,
+          "type": "flood_latency",
+          "details": "77.97ms during flood"
+        },
+        {
+          "timestamp": 1789091916.301924,
+          "type": "flood_latency",
+          "details": "76.31ms during flood"
+        },
+        {
+          "timestamp": 1789091916.4424448,
+          "type": "flood_latency",
+          "details": "79.24ms during flood"
+        },
+        {
+          "timestamp": 1789091916.5859766,
+          "type": "flood_latency",
+          "details": "74.93ms during flood"
+        },
+        {
+          "timestamp": 1789091916.7280264,
+          "type": "flood_latency",
+          "details": "75.64ms during flood"
+        },
+        {
+          "timestamp": 1789091916.88872,
+          "type": "flood_latency",
+          "details": "78.36ms during flood"
+        },
+        {
+          "timestamp": 1789091917.0400064,
+          "type": "flood_latency",
+          "details": "80.96ms during flood"
+        },
+        {
+          "timestamp": 1789091917.188753,
+          "type": "flood_latency",
+          "details": "77.62ms during flood"
+        },
+        {
+          "timestamp": 1789091917.3384657,
+          "type": "flood_latency",
+          "details": "75.47ms during flood"
+        },
+        {
+          "timestamp": 1789091917.4946115,
+          "type": "flood_latency",
+          "details": "80.80ms during flood"
+        }
+      ]
+    }
+  }
+}

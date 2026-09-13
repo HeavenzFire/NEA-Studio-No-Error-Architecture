@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "total_invoices": 6,
+    "paid_count": 4,
+    "outstanding_count": 1,
+    "total_distributed": 600000.0,
+    "children_stabilized": true,
+    "cascade_mode": "children_only"
+  },
+  "allocations": [
+    {
+      "invoice_id": "INV-003",
+      "amount_allocated": 230000.0,
+      "remaining_balance": 0.0,
+      "status": "paid",
+      "priority_level": "LIFE_FIRST",
+      "timestamp": 1789092925398
+    },
+    {
+      "invoice_id": "INV-001",
+      "amount_allocated": 125000.0,
+      "remaining_balance": 0.0,
+      "status": "paid",
+      "priority_level": "LIFE_FIRST",
+      "timestamp": 1789092925398
+    },
+    {
+      "invoice_id": "INV-005",
+      "amount_allocated": 180000.0,
+      "remaining_balance": 0.0,
+      "status": "paid",
+      "priority_level": "LIFE_FIRST",
+      "timestamp": 1789092925398
+    },
+    {
+      "invoice_id": "INV-006",
+      "amount_allocated": 60000.0,
+      "remaining_balance": 0.0,
+      "status": "paid",
+      "priority_level": "HIGH",
+      "timestamp": 1789092925398
+    },
+    {
+      "invoice_id": "INV-002",
+      "amount_allocated": 5000.0,
+      "remaining_balance": 10000.0,
+      "status": "partial",
+      "priority_level": "STANDARD",
+      "timestamp": 1789092925398
+    }
+  ],
+  "timestamp": "2026-09-11T02:15:25.399001"
+}
