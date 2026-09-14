@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-09-14T17:16:53.672207+00:00",
+  "test_suite": "guardian_shield_v1",
+  "components": {
+    "elysium_archive": {
+      "status": "PASS",
+      "archive_hash": "sha256:7682edc81...",
+      "restoration_verified": true,
+      "latency_ms": 0.5
+    },
+    "billing_pipeline": {
+      "status": "PASS",
+      "claim_processed": "CLM-2024-001",
+      "amount_paid": 30000.0,
+      "audit_hash": "fe55b01d769cbbc8...",
+      "pipeline_latency_ms": 12.5
+    },
+    "failsafe_triggers": {
+      "status": "PASS",
+      "triggers_active": 0,
+      "circuit_breaker": "CLOSED",
+      "rollback_ready": true
+    }
+  },
+  "integration_flows": [
+    {
+      "flow_name": "patient_intake_to_payment",
+      "steps": [
+        {
+          "step": "intake",
+          "status": "PASS"
+        },
+        {
+          "step": "verification",
+          "status": "PASS"
+        },
+        {
+          "step": "archive",
+          "status": "PASS"
+        },
+        {
+          "step": "payment_routing",
+          "status": "PASS"
+        },
+        {
+          "step": "confirmation",
+          "status": "PASS"
+        }
+      ],
+      "total_latency_ms": 45.2,
+      "status": "PASS"
+    }
+  ],
+  "overall_status": "PASS",
+  "execution_time_seconds": 0.0002579689025878906
+}
