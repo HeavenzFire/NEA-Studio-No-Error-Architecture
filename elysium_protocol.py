@@ -19,7 +19,7 @@ import json
 import time
 import uuid
 from dataclasses import dataclass, field, asdict
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Optional, Any, Tuple
 from enum import Enum
 import copy
@@ -88,7 +88,7 @@ class ElysiumVault:
         if lineage_id is None:
             lineage_id = f"L-{uuid.uuid4().hex[:8].upper()}"
         
-        timestamp = datetime.utcnow().isoformat() + "Z"
+        timestamp = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
         serialized = json.dumps(data, sort_keys=True, separators=(',', ':'))
         content_hash = f"sha256:{hashlib.sha256(serialized.encode()).hexdigest()}"
         
@@ -136,7 +136,7 @@ class ElysiumVault:
             new_snapshot = StateSnapshot(
                 lineage_id=f"{lineage_id}-DORM",
                 content_hash=snapshot.content_hash,
-                timestamp=datetime.utcnow().isoformat() + "Z",
+                timestamp=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
                 lifecycle_status=StateLifecycle.DORMANT,
                 data_payload=copy.deepcopy(snapshot.data_payload),
                 metadata={**snapshot.metadata, "dormancy_reason": "archived"},
@@ -183,7 +183,7 @@ class ResonanceCycle:
         receipt = RestorationReceipt(
             lineage_id=lineage_id,
             reconstruction_method=method,
-            restore_timestamp=datetime.utcnow().isoformat() + "Z"
+            restore_timestamp=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
         )
         
         # Retrieve original snapshot
@@ -307,7 +307,7 @@ class ElysiumProtocol:
         """Export complete audit package for independent verification."""
         return {
             "protocol_version": "1.0",
-            "export_timestamp": datetime.utcnow().isoformat() + "Z",
+            "export_timestamp": datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
             "vault_summary": {
                 "total_snapshots": len(self.vault._archive),
                 "active_states": sum(1 for s in self.vault._archive.values() if s.lifecycle_status == StateLifecycle.ACTIVE),
