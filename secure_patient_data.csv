@@ -1,0 +1,4 @@
+case_id,patient_age,diagnosis,status,billing_gap,insurance_status,consent_obtained,legal_disputes,social_worker_clearance,urgency_score
+PedsOnc-2024-001,7,Acute_Lymphoblastic_Leukemia,discharge_pending,8750,gap_identified,true,false,true,9.2
+PedsOnc-2024-002,4,Neuroblastoma,treatment_active,23000,denied_claim,true,true,false,8.7
+PedsOnc-2024-003,12,Osteosarcoma,discharge_pending,11200,gap_identified,true,false,true,9.5
