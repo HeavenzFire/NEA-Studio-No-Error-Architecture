@@ -1,6 +1,6 @@
 {
   "protocol_version": "1.0",
-  "export_timestamp": "2026-09-13T02:41:37.213100Z",
+  "export_timestamp": "2026-09-13T03:25:30.007519Z",
   "vault_summary": {
     "total_snapshots": 3,
     "active_states": 1,
@@ -13,8 +13,8 @@
       "lineage_id": "L-DEMO-001-DORM",
       "source_state_hash": "sha256:44bd6ca51f48f7fd3789bc1ad52d8af97756c7451b7aabb56503e04c7d0415cd",
       "restored_state_hash": "sha256:44bd6ca51f48f7fd3789bc1ad52d8af97756c7451b7aabb56503e04c7d0415cd",
-      "source_timestamp": "2026-09-13T02:41:37.212919Z",
-      "restore_timestamp": "2026-09-13T02:41:37.212954Z",
+      "source_timestamp": "2026-09-13T03:25:30.007364Z",
+      "restore_timestamp": "2026-09-13T03:25:30.007389Z",
       "reconstruction_method": "deterministic-replay-v1",
       "verification": {
         "hash_match": true,
