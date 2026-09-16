@@ -1,0 +1,386 @@
+{
+  "baseline": {
+    "monthly_snapshots": [
+      {
+        "month": 1,
+        "total_users": 4891734.407335946,
+        "total_debt_dissolved": 391338752.58687574,
+        "medical_dissolved": 82181138.04324389,
+        "active_agents": 733759,
+        "countries_active": 4
+      },
+      {
+        "month": 2,
+        "total_users": 6525724.454569856,
+        "total_debt_dissolved": 946025331.2253134,
+        "medical_dissolved": 198665319.55731583,
+        "active_agents": 978857,
+        "countries_active": 4
+      },
+      {
+        "month": 3,
+        "total_users": 8619518.773864841,
+        "total_debt_dissolved": 1721782020.873149,
+        "medical_dissolved": 361574224.3833612,
+        "active_agents": 1292926,
+        "countries_active": 4
+      },
+      {
+        "month": 4,
+        "total_users": 11270490.01193885,
+        "total_debt_dissolved": 2792478572.00734,
+        "medical_dissolved": 586420500.1215414,
+        "active_agents": 1690571,
+        "countries_active": 4
+      },
+      {
+        "month": 5,
+        "total_users": 14584015.056999277,
+        "total_debt_dissolved": 4250880077.7072678,
+        "medical_dissolved": 892684816.3185261,
+        "active_agents": 2187600,
+        "countries_active": 4
+      },
+      {
+        "month": 6,
+        "total_users": 18668173.319859374,
+        "total_debt_dissolved": 6211038276.292501,
+        "medical_dissolved": 1304318038.0214252,
+        "active_agents": 2800224,
+        "countries_active": 4
+      },
+      {
+        "month": 7,
+        "total_users": 31845265.928710103,
+        "total_debt_dissolved": 9714017528.450611,
+        "medical_dissolved": 2039943680.9746284,
+        "active_agents": 4776778,
+        "countries_active": 4
+      },
+      {
+        "month": 8,
+        "total_users": 45807706.83729257,
+        "total_debt_dissolved": 14981903814.739262,
+        "medical_dissolved": 3146199801.095244,
+        "active_agents": 6871144,
+        "countries_active": 4
+      },
+      {
+        "month": 9,
+        "total_users": 64076756.55139629,
+        "total_debt_dissolved": 22671114600.906807,
+        "medical_dissolved": 4760934066.190431,
+        "active_agents": 9611500,
+        "countries_active": 4
+      },
+      {
+        "month": 10,
+        "total_users": 87717433.89357333,
+        "total_debt_dissolved": 33635793837.603477,
+        "medical_dissolved": 7063516705.896729,
+        "active_agents": 13157601,
+        "countries_active": 23
+      },
+      {
+        "month": 11,
+        "total_users": 117694021.21473086,
+        "total_debt_dissolved": 48936016595.51849,
+        "medical_dissolved": 10276563485.058882,
+        "active_agents": 17654090,
+        "countries_active": 25
+      },
+      {
+        "month": 12,
+        "total_users": 154922444.7217645,
+        "total_debt_dissolved": 69850546632.95667,
+        "medical_dissolved": 14668614792.920908,
+        "active_agents": 23238354,
+        "countries_active": 25
+      },
+      {
+        "month": 13,
+        "total_users": 200169781.31026986,
+        "total_debt_dissolved": 97874316016.39445,
+        "medical_dissolved": 20553606363.44284,
+        "active_agents": 30025454,
+        "countries_active": 25
+      },
+      {
+        "month": 14,
+        "total_users": 253931644.12483498,
+        "total_debt_dissolved": 134694404414.49554,
+        "medical_dissolved": 28285824927.04407,
+        "active_agents": 38089732,
+        "countries_active": 25
+      },
+      {
+        "month": 15,
+        "total_users": 316297002.7745784,
+        "total_debt_dissolved": 182138954830.68225,
+        "medical_dissolved": 38249180514.443306,
+        "active_agents": 47444539,
+        "countries_active": 25
+      },
+      {
+        "month": 16,
+        "total_users": 386816771.9925498,
+        "total_debt_dissolved": 242095554489.5275,
+        "medical_dissolved": 50840066442.80078,
+        "active_agents": 58022504,
+        "countries_active": 25
+      },
+      {
+        "month": 17,
+        "total_users": 464400139.25073117,
+        "total_debt_dissolved": 316399576769.64453,
+        "medical_dissolved": 66443911121.62535,
+        "active_agents": 69660008,
+        "countries_active": 25
+      },
+      {
+        "month": 18,
+        "total_users": 547270045.8012458,
+        "total_debt_dissolved": 406699134326.85,
+        "medical_dissolved": 85406818208.63849,
+        "active_agents": 82090496,
+        "countries_active": 25
+      },
+      {
+        "month": 19,
+        "total_users": 633012391.5779072,
+        "total_debt_dissolved": 514311240895.0943,
+        "medical_dissolved": 108005360587.9698,
+        "active_agents": 94951843,
+        "countries_active": 25
+      },
+      {
+        "month": 20,
+        "total_users": 718744567.4231352,
+        "total_debt_dissolved": 640091540194.1428,
+        "medical_dissolved": 134419223440.77,
+        "active_agents": 107811672,
+        "countries_active": 25
+      },
+      {
+        "month": 21,
+        "total_users": 801401089.4503323,
+        "total_debt_dissolved": 784343736295.2029,
+        "medical_dissolved": 164712184621.99255,
+        "active_agents": 120210149,
+        "countries_active": 25
+      },
+      {
+        "month": 22,
+        "total_users": 878091499.5692196,
+        "total_debt_dissolved": 946790663715.5084,
+        "medical_dissolved": 198826039380.25674,
+        "active_agents": 131713712,
+        "countries_active": 25
+      },
+      {
+        "month": 23,
+        "total_users": 946448142.1754984,
+        "total_debt_dissolved": 1126615810728.853,
+        "medical_dissolved": 236589320253.05908,
+        "active_agents": 141967209,
+        "countries_active": 25
+      },
+      {
+        "month": 24,
+        "total_users": 1004874172.6425376,
+        "total_debt_dissolved": 1322566274394.148,
+        "medical_dissolved": 277738917622.771,
+        "active_agents": 150731116,
+        "countries_active": 25
+      }
+    ],
+    "thresholds": [
+      "Month 2: REGULATORY CASCADE (6.5M users)",
+      "Month 3: REGULATORY CASCADE (8.6M users)",
+      "Month 4: REGULATORY CASCADE (11.3M users)",
+      "Month 5: REGULATORY CASCADE (14.6M users)",
+      "Month 6: MEDICAL MILESTONE ($1.30B)",
+      "Month 6: REGULATORY CASCADE (18.7M users)",
+      "Month 7: MEDICAL MILESTONE ($2.04B)",
+      "Month 7: REGULATORY CASCADE (31.8M users)",
+      "Month 8: MEDICAL MILESTONE ($3.15B)",
+      "Month 8: REGULATORY CASCADE (45.8M users)",
+      "Month 9: MEDICAL MILESTONE ($4.76B)",
+      "Month 9: REGULATORY CASCADE (64.1M users)",
+      "Month 10: MEDICAL MILESTONE ($7.06B)",
+      "Month 10: REGULATORY CASCADE (87.7M users)",
+      "Month 11: MEDICAL MILESTONE ($10.28B)",
+      "Month 11: REGULATORY CASCADE (117.7M users)",
+      "Month 12: MEDICAL MILESTONE ($14.67B)",
+      "Month 12: REGULATORY CASCADE (154.9M users)",
+      "Month 13: MEDICAL MILESTONE ($20.55B)",
+      "Month 13: REGULATORY CASCADE (200.2M users)",
+      "Month 14: MEDICAL MILESTONE ($28.29B)",
+      "Month 14: REGULATORY CASCADE (253.9M users)",
+      "Month 15: MEDICAL MILESTONE ($38.25B)",
+      "Month 15: REGULATORY CASCADE (316.3M users)",
+      "Month 16: MEDICAL MILESTONE ($50.84B)",
+      "Month 16: REGULATORY CASCADE (386.8M users)",
+      "Month 17: MEDICAL MILESTONE ($66.44B)",
+      "Month 17: REGULATORY CASCADE (464.4M users)",
+      "Month 18: MEDICAL MILESTONE ($85.41B)",
+      "Month 18: REGULATORY CASCADE (547.3M users)",
+      "Month 19: MEDICAL MILESTONE ($108.01B)",
+      "Month 19: REGULATORY CASCADE (633.0M users)",
+      "Month 20: MEDICAL MILESTONE ($134.42B)",
+      "Month 20: REGULATORY CASCADE (718.7M users)",
+      "Month 21: MEDICAL MILESTONE ($164.71B)",
+      "Month 21: REGULATORY CASCADE (801.4M users)",
+      "Month 22: MEDICAL MILESTONE ($198.83B)",
+      "Month 22: REGULATORY CASCADE (878.1M users)",
+      "Month 23: MEDICAL MILESTONE ($236.59B)",
+      "Month 23: REGULATORY CASCADE (946.4M users)",
+      "Month 24: MEDICAL MILESTONE ($277.74B)",
+      "Month 24: REGULATORY CASCADE (1004.9M users)"
+    ],
+    "final_state": {
+      "US": {
+        "adoption_rate": 0.44545296118893574,
+        "debt_dissolved": 276825062852.84326,
+        "active_agents": 22116739
+      },
+      "AR": {
+        "adoption_rate": 0.23340824066012142,
+        "debt_dissolved": 12031313575.096575,
+        "active_agents": 1589510
+      },
+      "TR": {
+        "adoption_rate": 0.20906605751857144,
+        "debt_dissolved": 20512689411.786366,
+        "active_agents": 2643640
+      },
+      "GR": {
+        "adoption_rate": 0.3736592008229663,
+        "debt_dissolved": 7081170721.36917,
+        "active_agents": 582908
+      },
+      "LB": {
+        "adoption_rate": 0.4525982541230828,
+        "debt_dissolved": 5794966542.460215,
+        "active_agents": 461650
+      },
+      "ZW": {
+        "adoption_rate": 0.4028345058527071,
+        "debt_dissolved": 11167217450.28281,
+        "active_agents": 900335
+      },
+      "IT": {
+        "adoption_rate": 0.24191027213853059,
+        "debt_dissolved": 17238720006.36741,
+        "active_agents": 2191707
+      },
+      "ES": {
+        "adoption_rate": 0.2269345162570514,
+        "debt_dissolved": 12881782349.786575,
+        "active_agents": 1613504
+      },
+      "PT": {
+        "adoption_rate": 0.22306518363653638,
+        "debt_dissolved": 2740198738.708964,
+        "active_agents": 341289
+      },
+      "TH": {
+        "adoption_rate": 0.23546060318937959,
+        "debt_dissolved": 19613700442.219357,
+        "active_agents": 2465272
+      },
+      "MY": {
+        "adoption_rate": 0.2281842323671169,
+        "debt_dissolved": 8898409509.775593,
+        "active_agents": 1108975
+      },
+      "ID": {
+        "adoption_rate": 0.22555625818842867,
+        "debt_dissolved": 74583834279.10634,
+        "active_agents": 9253445
+      },
+      "BR": {
+        "adoption_rate": 0.2451475520493001,
+        "debt_dissolved": 62073383336.50877,
+        "active_agents": 7817755
+      },
+      "CO": {
+        "adoption_rate": 0.23522051357225623,
+        "debt_dissolved": 14409040887.467718,
+        "active_agents": 1795908
+      },
+      "CL": {
+        "adoption_rate": 0.2326996559541157,
+        "debt_dissolved": 5372016630.27974,
+        "active_agents": 666684
+      },
+      "JP": {
+        "adoption_rate": 0.31547821123628983,
+        "debt_dissolved": 47615775921.85627,
+        "active_agents": 5986199
+      },
+      "DE": {
+        "adoption_rate": 0.23324358004395465,
+        "debt_dissolved": 23554333548.904613,
+        "active_agents": 2910879
+      },
+      "GB": {
+        "adoption_rate": 0.2935351991816072,
+        "debt_dissolved": 23904215246.162003,
+        "active_agents": 2963237
+      },
+      "CA": {
+        "adoption_rate": 0.23423702347943132,
+        "debt_dissolved": 10843880655.003836,
+        "active_agents": 1335151
+      },
+      "FR": {
+        "adoption_rate": 0.23095778309107812,
+        "debt_dissolved": 18466963384.485252,
+        "active_agents": 2262231
+      },
+      "NG": {
+        "adoption_rate": 0.28561844522577245,
+        "debt_dissolved": 71944936556.10974,
+        "active_agents": 8829894
+      },
+      "KE": {
+        "adoption_rate": 0.3007524556122952,
+        "debt_dissolved": 19675456199.459305,
+        "active_agents": 2427072
+      },
+      "IN": {
+        "adoption_rate": 0.2509929855606433,
+        "debt_dissolved": 419774650942.41907,
+        "active_agents": 51955548
+      },
+      "PK": {
+        "adoption_rate": 0.2883459288175446,
+        "debt_dissolved": 78252682227.86012,
+        "active_agents": 9554342
+      },
+      "BD": {
+        "adoption_rate": 0.2816127465816398,
+        "debt_dissolved": 57309872977.82882,
+        "active_agents": 6957242
+      }
+    },
+    "convergence_month": null
+  },
+  "monte_carlo": {
+    "n_simulations": 100,
+    "convergence_stats": {
+      "median": null,
+      "p25": null,
+      "p75": null,
+      "min": null,
+      "max": null
+    },
+    "final_users_stats": {
+      "median": 271500478.9482498,
+      "p10": 20349853.415590033,
+      "p90": 582945407.259221
+    },
+    "success_rate": 0.0
+  }
+}
