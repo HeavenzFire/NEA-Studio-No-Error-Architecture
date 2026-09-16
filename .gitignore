@@ -1,27 +1,59 @@
-```gitignore
-# Dependencies
-__pycache__/
+```
+# Compiled and build artifacts
 *.pyc
-*.pyo
-*.pyd
+__pycache__/
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.class
+*.out
 
-# Logs and temp files
-*.log
-*.tmp
-
-# Environment
+# Dependencies
+.venv/
+venv/
 .env
 .env.local
 *.env.*
 
-# Coverage reports
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Editors
+.vscode/
+.idea/
+
+# Coverage
+.coverage
 coverage/
 htmlcov/
-.coverage
 
-# Simulation outputs (if they become large/generated)
-simulation_outputs/
+# Distribution artifacts
+dist/
+build/
+target/
+*.tar.gz
+*.zip
+*.whl
 
-# Original rules preserved
-*.log
+# Python specific
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage*
+.pytest_cache/
+.mypy_cache/
+
+# System files
+.DS_Store
+Thumbs.db
 ```
