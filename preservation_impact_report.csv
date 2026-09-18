@@ -1,0 +1,16 @@
+Scenario,Timeframe,Day,Date,Daily Families Preserved,Cumulative Families,Est. Debt Dissolved (USD),Privacy Shields Active
+Conservative (Pilot),Day 30,30,2026-10-17,50,765,"$9,562,500.00",765
+Conservative (Pilot),Day 90,90,2026-12-16,50,3765,"$47,062,500.00",3765
+Conservative (Pilot),Day 365,365,2027-09-17,50,17515,"$218,937,500.00",17515
+Conservative (Pilot),Day 730,730,2028-09-16,50,35765,"$447,062,500.00",35765
+Conservative (Pilot),Day 1825,1825,2031-09-16,50,90515,"$1,131,437,500.00",90515
+Moderate (Regional),Day 30,30,2026-10-17,83,1278,"$15,975,000.00",1278
+Moderate (Regional),Day 90,90,2026-12-16,250,11335,"$141,687,500.00",11335
+Moderate (Regional),Day 365,365,2027-09-17,250,80085,"$1,001,062,500.00",80085
+Moderate (Regional),Day 730,730,2028-09-16,250,171335,"$2,141,687,500.00",171335
+Moderate (Regional),Day 1825,1825,2031-09-16,250,445085,"$5,563,562,500.00",445085
+Aggressive (Statewide),Day 30,30,2026-10-17,208,3213,"$40,162,500.00",3213
+Aggressive (Statewide),Day 90,90,2026-12-16,625,28395,"$354,937,500.00",28395
+Aggressive (Statewide),Day 365,365,2027-09-17,1250,344290,"$4,303,625,000.00",344290
+Aggressive (Statewide),Day 730,730,2028-09-16,1250,800540,"$10,006,750,000.00",800540
+Aggressive (Statewide),Day 1825,1825,2031-09-16,1250,2169290,"$27,116,125,000.00",2169290
