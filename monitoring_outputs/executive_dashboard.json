@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-09-17T22:42:39.811281",
+  "epoch_day": 0,
+  "summary": {
+    "total_families_preserved": 542,
+    "total_debt_dissolved_usd": 6775000.0,
+    "total_life_support_actions": 1247,
+    "active_hospitals": 5,
+    "active_alerts": 0
+  },
+  "projections": {
+    "families_per_day": 540,
+    "families_per_month": 16200,
+    "families_per_year": 197100,
+    "debt_dissolved_per_year_usd": 2463750000.0
+  }
+}

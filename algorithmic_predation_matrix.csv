@@ -1,0 +1,7 @@
+Platform,Mechanism_ID,Technical_Description,Psychological_Target,Harm_Outcome,Statutory_Violation,Evidence_Source
+Meta/Instagram,VAR-REWARD-01,Variable reward schedule on likes/comments,Dopamine dysregulation (Slot Machine Effect),"Anxiety, Depression, Compulsive Checking",FTC Act §5 (Unfair Practice),Frances Haugen Leaks (2021)
+Snapchat,STREAK-COERCION-01,Visual countdown timer for daily interaction,"FOMO, Social Anxiety, Obligation Loop","Sleep Deprivation, Academic Decline",TX DTPA §17.46 (Deceptive Act),Internal Memo: 'Addiction by Design'
+TikTok,INFINITE-SCROLL-01,Removal of page boundaries + auto-play next,Destruction of Satiety Signals,"Dissociative States, 4hr+ Sessions",COPPA §6502 (Unfair Collection),Common Sense Media Study (2023)
+YouTube,RABBIT-HOLE-01,Recommendation graph optimizing for watch-time,"Radicalization, Isolation",Exposure to Extremist Content,18 U.S.C. §2 (Aiding/Abetting),WSJ 'Facebook Files' (2021)
+Roblox,PREDATORY-MONETIZATION-01,Loot boxes + gacha mechanics targeting minors,Gambling Addiction Normalization,"Financial Loss, Compulsive Spending",State Gambling Statutes,Parent Class Action (2022)
+Discord,DISCOVERY-ACCEL-01,Public server recommendation without age-gating,Predator Access to Minors,"Grooming, Sexual Exploitation",18 U.S.C. §2422 (Coercion),NCMEC Report #2023-445
